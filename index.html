@@ -1,76 +1,222 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>RIMSEG | Importadora y Comercializadora</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIMSEG | Importadora y Comercializadora</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.6;
+    color:#222;
+}
+
+header{
+    background:#0d2340;
+    color:white;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:bold;
+}
+
+.hero{
+    background:linear-gradient(rgba(13,35,64,.85),rgba(13,35,64,.85)),
+    url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1600');
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-top:15px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#c9a227;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section h2{
+    text-align:center;
+    color:#0d2340;
+    margin-bottom:30px;
+    font-size:36px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+}
+
+.card h3{
+    color:#0d2340;
+    margin-bottom:15px;
+}
+
+.dark{
+    background:#f6f8fb;
+}
+
+footer{
+    background:#0d2340;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.lang{
+    text-align:center;
+    margin-top:10px;
+    color:#c9a227;
+}
+</style>
 </head>
+
 <body>
 
-  <h1>RIMSEG</h1>
-  <p><strong>Importadora y Comercializadora</strong></p>
-  <p>Importación, comercialización y distribución de productos para el mercado mexicano.</p>
+<header>
+<div class="logo">RIMSEG</div>
 
-  <hr>
+<nav>
+<a href="#about">Nosotros</a>
+<a href="#services">Servicios</a>
+<a href="#products">Categorías</a>
+<a href="#contact">Contacto</a>
+</nav>
+</header>
 
-  <h2>Quiénes Somos</h2>
-  <p>
-    RIMSEG es una empresa mexicana dedicada a la importación y comercialización
-    de una amplia variedad de productos, trabajando con distribuidores,
-    mayoristas y negocios.
-  </p>
+<section class="hero">
+<h1>RIMSEG</h1>
+<p>Importadora y Comercializadora</p>
+<p>Importación • Distribución • Desarrollo Comercial</p>
 
-  <h2>Who We Are</h2>
-  <p>
-    RIMSEG is a Mexican company focused on importing and commercializing
-    a wide variety of products for distributors, wholesalers and businesses.
-  </p>
+<a href="#contact" class="btn">Contáctanos</a>
 
-  <hr>
+<div class="lang">
+ESPAÑOL | ENGLISH
+</div>
+</section>
 
-  <h2>Qué Hacemos</h2>
-  <ul>
-    <li>Importación internacional</li>
-    <li>Comercialización mayorista</li>
-    <li>Distribución nacional</li>
-    <li>Desarrollo de proveedores</li>
-  </ul>
+<section id="about" class="section">
+<h2>Quiénes Somos</h2>
 
-  <h2>What We Do</h2>
-  <ul>
-    <li>International imports</li>
-    <li>Wholesale commercialization</li>
-    <li>National distribution</li>
-    <li>Supplier development</li>
-  </ul>
+<p style="text-align:center;font-size:18px;max-width:900px;margin:auto;">
+RIMSEG es una empresa mexicana dedicada a la importación,
+comercialización y distribución de una amplia variedad de productos,
+trabajando con distribuidores, mayoristas y empresas en todo el país.
+</p>
+</section>
 
-  <hr>
+<section id="services" class="section dark">
+<h2>Qué Hacemos</h2>
 
-  <h2>Categorías</h2>
-  <ul>
-    <li>Telas y textiles</li>
-    <li>Muebles y mesas</li>
-    <li>Productos para el hogar</li>
-    <li>Productos de consumo</li>
-  </ul>
+<div class="cards">
 
-  <h2>Categories</h2>
-  <ul>
-    <li>Fabrics and textiles</li>
-    <li>Furniture and tables</li>
-    <li>Home products</li>
-    <li>Consumer goods</li>
-  </ul>
+<div class="card">
+<h3>Importación Internacional</h3>
+<p>Desarrollo y gestión de proveedores internacionales.</p>
+</div>
 
-  <hr>
+<div class="card">
+<h3>Comercialización</h3>
+<p>Distribución y venta a mayoristas y distribuidores.</p>
+</div>
 
-  <h2>Datos Corporativos</h2>
-  <p>Razón social: Corporativo Comercial Rimseg, S.A. de C.V.</p>
-  <p>RFC: R180816J26</p>
+<div class="card">
+<h3>Logística</h3>
+<p>Soluciones eficientes para abastecimiento y distribución.</p>
+</div>
 
-  <hr>
+</div>
+</section>
 
-  <h2>Contacto / Contact</h2>
-  <p>Próximamente agregaremos teléfono, WhatsApp y correo.</p>
+<section id="products" class="section">
+<h2>Categorías</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Textiles y Telas</h3>
+<p>Productos textiles para distintos mercados e industrias.</p>
+</div>
+
+<div class="card">
+<h3>Muebles y Mesas</h3>
+<p>Soluciones para hogar, oficina y espacios comerciales.</p>
+</div>
+
+<div class="card">
+<h3>Productos de Consumo</h3>
+<p>Amplia variedad de productos para distribución.</p>
+</div>
+
+</div>
+</section>
+
+<section id="contact" class="section dark">
+<h2>Contacto</h2>
+
+<p style="text-align:center;font-size:18px;">
+Información de contacto próximamente.
+</p>
+
+<p style="text-align:center;margin-top:20px;">
+Corporativo Comercial Rimseg, S.A. de C.V.
+</p>
+</section>
+
+<footer>
+© 2026 RIMSEG | Importadora y Comercializadora
+</footer>
 
 </body>
 </html>

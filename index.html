@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -7,8 +6,8 @@
 
   <title>RIMSEG | Importadora y Comercializadora</title>
 
-  <meta name="description" content="RIMSEG es una empresa mexicana dedicada a la importación, comercialización y distribución de productos para distribuidores y mayoristas." />
-  <meta name="keywords" content="RIMSEG, importadora, comercializadora, textiles, telas, muebles, mesas, distribuidores, mayoristas, México" />
+  <meta name="description" content="RIMSEG es una empresa mexicana dedicada a la importación, comercialización y distribución de productos para distribuidores, mayoristas y empresas." />
+  <meta name="keywords" content="RIMSEG, importadora, comercializadora, distribuidora, textiles, telas, muebles, mesas, productos para mayoristas, distribuidores, México" />
   <meta name="author" content="RIMSEG" />
 
   <style>
@@ -65,20 +64,22 @@
     .nav {
       max-width: 1200px;
       margin: auto;
-      padding: 12px 22px;
+      padding: 11px 22px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      gap: 20px;
     }
 
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
+      min-width: 130px;
     }
 
     .brand img {
-      height: 62px;
+      height: 56px;
       width: auto;
       object-fit: contain;
       background: white;
@@ -88,7 +89,7 @@
 
     nav a {
       color: white;
-      margin-left: 22px;
+      margin-left: 20px;
       font-size: 14px;
       font-weight: 700;
       opacity: 0.92;
@@ -101,7 +102,7 @@
     .lang-buttons {
       display: flex;
       gap: 8px;
-      margin-left: 20px;
+      margin-left: 18px;
     }
 
     .lang-buttons button {
@@ -122,12 +123,12 @@
 
     .hero {
       background:
-        linear-gradient(120deg, rgba(13,35,64,0.95), rgba(13,35,64,0.72)),
+        linear-gradient(120deg, rgba(13,35,64,0.92), rgba(13,35,64,0.70)),
         url("assets/warehouse-wide.jpg");
       background-size: cover;
       background-position: center;
       color: white;
-      padding: 125px 22px 110px;
+      padding: 112px 22px 100px;
     }
 
     .hero-inner {
@@ -149,7 +150,7 @@
     }
 
     .hero h1 {
-      font-size: 62px;
+      font-size: 60px;
       line-height: 1.05;
       margin-bottom: 20px;
     }
@@ -258,7 +259,7 @@
     }
 
     .section-title p {
-      max-width: 780px;
+      max-width: 800px;
       margin: auto;
       color: var(--gray);
       font-size: 17px;
@@ -357,19 +358,19 @@
 
     .categories {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
     }
 
     .category {
-      min-height: 310px;
+      min-height: 290px;
       border-radius: 18px;
       overflow: hidden;
       position: relative;
       color: white;
       display: flex;
       align-items: flex-end;
-      padding: 32px;
+      padding: 30px;
       background-size: cover;
       background-position: center;
       box-shadow: var(--shadow);
@@ -388,21 +389,113 @@
     }
 
     .category h3 {
-      font-size: 30px;
+      font-size: 26px;
       margin-bottom: 8px;
     }
 
     .category p {
       color: rgba(255,255,255,0.9);
-      font-size: 17px;
+      font-size: 16px;
     }
 
     .cat-textiles {
-      background-image: url("assets/warehouse-rolls.jpg");
+      background-image: url("assets/category-textiles-organizacion.jpg");
     }
 
     .cat-furniture {
-      background-image: url("assets/warehouse-detail.jpg");
+      background-image: url("assets/category-muebles-mesas.jpg");
+    }
+
+    .cat-home {
+      background-image: url("assets/category-hogar-organizacion.jpg");
+    }
+
+    .cat-commercial {
+      background-image: url("assets/category-equipamiento-comercial.jpg");
+    }
+
+    .cat-garden {
+      background-image: url("assets/category-jardin-temporada.jpg");
+    }
+
+    .cat-industrial {
+      background-image: url("assets/category-industrial.jpg");
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: .25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(13,35,64,0.14);
+    }
+
+    .product-img {
+      height: 225px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .product-content {
+      padding: 18px;
+    }
+
+    .product-content small {
+      color: var(--gold);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .product-content h3 {
+      color: var(--navy);
+      margin-top: 5px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .product-content p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .catalog-cta {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .catalog-cta .btn.outline-dark {
+      border: 1px solid var(--navy);
+      color: var(--navy);
+    }
+
+    .catalog-cta .btn.outline-dark:hover {
+      background: var(--navy);
+      color: white;
     }
 
     .infra-grid {
@@ -659,6 +752,12 @@
       display: block;
     }
 
+    @media (max-width: 1100px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
     @media (max-width: 980px) {
       nav {
         display: none;
@@ -678,7 +777,8 @@
       .cards,
       .infra-grid,
       .categories,
-      .process {
+      .process,
+      .product-grid {
         grid-template-columns: 1fr;
       }
 
@@ -713,7 +813,6 @@
       }
     }
   </style>
-
 </head>
 
 <body>
@@ -724,23 +823,21 @@
       <img src="assets/logo.png" alt="RIMSEG Logo">
     </div>
 
-```
-<div style="display:flex; align-items:center;">
-  <nav>
-    <a href="#about"><span class="es">Nosotros</span><span class="en">About</span></a>
-    <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
-    <a href="#categories"><span class="es">Categorías</span><span class="en">Categories</span></a>
-    <a href="#infrastructure"><span class="es">Infraestructura</span><span class="en">Infrastructure</span></a>
-    <a href="#contact"><span class="es">Contacto</span><span class="en">Contact</span></a>
-  </nav>
+    <div style="display:flex; align-items:center;">
+      <nav>
+        <a href="#about"><span class="es">Nosotros</span><span class="en">About</span></a>
+        <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
+        <a href="#categories"><span class="es">Categorías</span><span class="en">Categories</span></a>
+        <a href="#catalog"><span class="es">Catálogo</span><span class="en">Catalog</span></a>
+        <a href="#infrastructure"><span class="es">Infraestructura</span><span class="en">Infrastructure</span></a>
+        <a href="#contact"><span class="es">Contacto</span><span class="en">Contact</span></a>
+      </nav>
 
-  <div class="lang-buttons">
-    <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
-    <button id="btn-en" onclick="setLang('en')">EN</button>
-  </div>
-</div>
-```
-
+      <div class="lang-buttons">
+        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -752,53 +849,50 @@
         <span class="en">Importer & Commercial Distributor</span>
       </div>
 
-```
-  <h1>
-    <span class="es">Soluciones de abastecimiento para distribuidores.</span>
-    <span class="en">Supply solutions for distributors.</span>
-  </h1>
+      <h1>
+        <span class="es">Soluciones de abastecimiento para distribuidores.</span>
+        <span class="en">Supply solutions for distributors.</span>
+      </h1>
 
-  <p>
-    <span class="es">
-      RIMSEG es una empresa mexicana dedicada a la importación,
-      comercialización y distribución de productos para el mercado nacional,
-      con atención a distribuidores, mayoristas y empresas.
-    </span>
-    <span class="en">
-      RIMSEG is a Mexican company focused on importing, commercializing
-      and distributing products for the national market, serving distributors,
-      wholesalers and businesses.
-    </span>
-  </p>
+      <p>
+        <span class="es">
+          RIMSEG es una empresa mexicana dedicada a la importación,
+          comercialización y distribución de productos para el mercado nacional,
+          con atención a distribuidores, mayoristas y empresas.
+        </span>
+        <span class="en">
+          RIMSEG is a Mexican company focused on importing, commercializing
+          and distributing products for the national market, serving distributors,
+          wholesalers and businesses.
+        </span>
+      </p>
 
-  <div class="hero-actions">
-    <a class="btn gold" href="mailto:info@rimseg.com">
-      <span class="es">Solicitar información</span>
-      <span class="en">Request information</span>
-    </a>
+      <div class="hero-actions">
+        <a class="btn gold" href="mailto:info@rimseg.com">
+          <span class="es">Solicitar información</span>
+          <span class="en">Request information</span>
+        </a>
 
-    <a class="btn outline" href="#contact">
-      <span class="es">Ver correos</span>
-      <span class="en">View emails</span>
-    </a>
-  </div>
-</div>
+        <a class="btn outline" href="assets/catalogo-rimseg.pdf" target="_blank">
+          <span class="es">Ver catálogo</span>
+          <span class="en">View catalog</span>
+        </a>
+      </div>
+    </div>
 
-<div class="hero-card">
-  <h3>
-    <span class="es">Áreas principales</span>
-    <span class="en">Main areas</span>
-  </h3>
+    <div class="hero-card">
+      <h3>
+        <span class="es">Áreas principales</span>
+        <span class="en">Main areas</span>
+      </h3>
 
-  <ul>
-    <li><span class="es">Importación internacional</span><span class="en">International imports</span></li>
-    <li><span class="es">Comercialización mayorista</span><span class="en">Wholesale commercialization</span></li>
-    <li><span class="es">Distribución nacional</span><span class="en">National distribution</span></li>
-    <li><span class="es">Textiles, telas, muebles y mesas</span><span class="en">Textiles, fabrics, furniture and tables</span></li>
-  </ul>
-</div>
-```
-
+      <ul>
+        <li><span class="es">Importación internacional</span><span class="en">International imports</span></li>
+        <li><span class="es">Comercialización mayorista</span><span class="en">Wholesale commercialization</span></li>
+        <li><span class="es">Distribución nacional</span><span class="en">National distribution</span></li>
+        <li><span class="es">Textiles, organización, muebles y equipamiento</span><span class="en">Textiles, organization, furniture and equipment</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -822,63 +916,60 @@
       </p>
     </div>
 
-```
-<div class="about-grid">
-  <div class="about-box">
-    <h3><span class="es">Nuestra empresa</span><span class="en">Our company</span></h3>
-    <p>
-      <span class="es">
-        RIMSEG se especializa en la importación y comercialización de productos
-        para distribuidores, con enfoque en textiles, telas, muebles, mesas
-        y productos de consumo.
-      </span>
-      <span class="en">
-        RIMSEG specializes in importing and commercializing products for
-        distributors, with a focus on textiles, fabrics, furniture, tables
-        and consumer goods.
-      </span>
-    </p>
-    <p>
-      <span class="es">
-        La empresa cuenta con oficinas corporativas en Naucalpan de Juárez,
-        Estado de México, y una estructura operativa orientada al servicio,
-        inventario y distribución.
-      </span>
-      <span class="en">
-        The company has corporate offices in Naucalpan de Juárez, State of Mexico,
-        and an operational structure focused on service, inventory and distribution.
-      </span>
-    </p>
-  </div>
+    <div class="about-grid">
+      <div class="about-box">
+        <h3><span class="es">Nuestra empresa</span><span class="en">Our company</span></h3>
+        <p>
+          <span class="es">
+            RIMSEG se especializa en la importación y comercialización de productos
+            para distribuidores, con enfoque en textiles, organización, muebles,
+            mesas, artículos para el hogar, consumo y equipamiento comercial.
+          </span>
+          <span class="en">
+            RIMSEG specializes in importing and commercializing products for
+            distributors, with a focus on textiles, organization, furniture,
+            tables, home goods, consumer products and commercial equipment.
+          </span>
+        </p>
+        <p>
+          <span class="es">
+            La empresa cuenta con oficinas corporativas en Naucalpan de Juárez,
+            Estado de México, y una estructura operativa orientada al servicio,
+            inventario y distribución.
+          </span>
+          <span class="en">
+            The company has corporate offices in Naucalpan de Juárez, State of Mexico,
+            and an operational structure focused on service, inventory and distribution.
+          </span>
+        </p>
+      </div>
 
-  <div class="stats">
-    <div class="stat">
-      <strong>2018</strong>
-      <span class="es">Inicio de operaciones</span>
-      <span class="en">Operations started</span>
+      <div class="stats">
+        <div class="stat">
+          <strong>2018</strong>
+          <span class="es">Inicio de operaciones</span>
+          <span class="en">Operations started</span>
+        </div>
+
+        <div class="stat">
+          <strong>MX</strong>
+          <span class="es">Mercado nacional</span>
+          <span class="en">National market</span>
+        </div>
+
+        <div class="stat">
+          <strong>B2B</strong>
+          <span class="es">Distribuidores y mayoristas</span>
+          <span class="en">Distributors & wholesalers</span>
+        </div>
+
+        <div class="stat">
+          <strong>360°</strong>
+          <span class="es">Abastecimiento comercial</span>
+          <span class="en">Commercial supply</span>
+        </div>
+      </div>
     </div>
-
-    <div class="stat">
-      <strong>MX</strong>
-      <span class="es">Mercado nacional</span>
-      <span class="en">National market</span>
-    </div>
-
-    <div class="stat">
-      <strong>B2B</strong>
-      <span class="es">Distribuidores y mayoristas</span>
-      <span class="en">Distributors & wholesalers</span>
-    </div>
-
-    <div class="stat">
-      <strong>360°</strong>
-      <span class="es">Abastecimiento comercial</span>
-      <span class="en">Commercial supply</span>
-    </div>
-  </div>
-</div>
-```
-
   </div>
 </section>
 
@@ -902,37 +993,34 @@
       </p>
     </div>
 
-```
-<div class="cards">
-  <div class="card">
-    <div class="icon">🌐</div>
-    <h3><span class="es">Importación</span><span class="en">Importing</span></h3>
-    <p>
-      <span class="es">Gestión comercial de productos provenientes de mercados internacionales.</span>
-      <span class="en">Commercial management of products sourced from international markets.</span>
-    </p>
-  </div>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3><span class="es">Importación</span><span class="en">Importing</span></h3>
+        <p>
+          <span class="es">Gestión comercial de productos provenientes de mercados internacionales.</span>
+          <span class="en">Commercial management of products sourced from international markets.</span>
+        </p>
+      </div>
 
-  <div class="card">
-    <div class="icon">📦</div>
-    <h3><span class="es">Comercialización</span><span class="en">Commercialization</span></h3>
-    <p>
-      <span class="es">Venta y desarrollo de productos para distribuidores, mayoristas y negocios.</span>
-      <span class="en">Product sales and development for distributors, wholesalers and businesses.</span>
-    </p>
-  </div>
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3><span class="es">Comercialización</span><span class="en">Commercialization</span></h3>
+        <p>
+          <span class="es">Venta y desarrollo de productos para distribuidores, mayoristas y negocios.</span>
+          <span class="en">Product sales and development for distributors, wholesalers and businesses.</span>
+        </p>
+      </div>
 
-  <div class="card">
-    <div class="icon">🚚</div>
-    <h3><span class="es">Distribución</span><span class="en">Distribution</span></h3>
-    <p>
-      <span class="es">Soluciones de abastecimiento para atender necesidades comerciales en México.</span>
-      <span class="en">Supply solutions to serve commercial needs across Mexico.</span>
-    </p>
-  </div>
-</div>
-```
-
+      <div class="card">
+        <div class="icon">🚚</div>
+        <h3><span class="es">Distribución</span><span class="en">Distribution</span></h3>
+        <p>
+          <span class="es">Soluciones de abastecimiento para atender necesidades comerciales en México.</span>
+          <span class="en">Supply solutions to serve commercial needs across Mexico.</span>
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -941,49 +1029,193 @@
     <div class="section-title">
       <span class="label"><span class="es">Categorías</span><span class="en">Categories</span></span>
       <h2>
-        <span class="es">Productos para diferentes canales comerciales.</span>
-        <span class="en">Products for different commercial channels.</span>
+        <span class="es">Líneas de producto para diferentes canales comerciales.</span>
+        <span class="en">Product lines for different commercial channels.</span>
       </h2>
       <p>
         <span class="es">
-          Trabajamos con líneas comerciales enfocadas en textiles, telas,
-          muebles, mesas y productos de consumo.
+          Trabajamos con artículos de organización, hogar, muebles, mesas,
+          equipamiento comercial, jardín, temporada y soluciones industriales.
         </span>
         <span class="en">
-          We work with commercial lines focused on textiles, fabrics,
-          furniture, tables and consumer products.
+          We work with organization, home, furniture, tables, commercial equipment,
+          garden, seasonal and industrial solution products.
         </span>
       </p>
     </div>
 
-```
-<div class="categories">
-  <div class="category cat-textiles">
-    <div class="category-content">
-      <h3><span class="es">Textiles y Telas</span><span class="en">Textiles & Fabrics</span></h3>
-      <p>
-        <span class="es">Productos textiles para distribuidores, mayoristas y negocios especializados.</span>
-        <span class="en">Textile products for distributors, wholesalers and specialized businesses.</span>
-      </p>
-    </div>
-  </div>
+    <div class="categories">
+      <div class="category cat-textiles">
+        <div class="category-content">
+          <h3><span class="es">Textiles y Organización</span><span class="en">Textiles & Organization</span></h3>
+          <p>
+            <span class="es">Soluciones para ropa, almacenamiento, textiles y organización del hogar.</span>
+            <span class="en">Solutions for clothing, storage, textiles and home organization.</span>
+          </p>
+        </div>
+      </div>
 
-  <div class="category cat-furniture">
-    <div class="category-content">
-      <h3><span class="es">Muebles y Mesas</span><span class="en">Furniture & Tables</span></h3>
-      <p>
-        <span class="es">Soluciones para hogar, comercio, oficinas y espacios comerciales.</span>
-        <span class="en">Solutions for home, retail, offices and commercial spaces.</span>
-      </p>
-    </div>
-  </div>
-</div>
-```
+      <div class="category cat-furniture">
+        <div class="category-content">
+          <h3><span class="es">Muebles y Mesas</span><span class="en">Furniture & Tables</span></h3>
+          <p>
+            <span class="es">Mesas plegables, auxiliares y productos para espacios comerciales.</span>
+            <span class="en">Folding tables, auxiliary tables and products for commercial spaces.</span>
+          </p>
+        </div>
+      </div>
 
+      <div class="category cat-home">
+        <div class="category-content">
+          <h3><span class="es">Hogar y Consumo</span><span class="en">Home & Consumer Goods</span></h3>
+          <p>
+            <span class="es">Artículos prácticos para hogar, uso diario y distribución mayorista.</span>
+            <span class="en">Practical home and everyday items for wholesale distribution.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-commercial">
+        <div class="category-content">
+          <h3><span class="es">Equipamiento Comercial</span><span class="en">Commercial Equipment</span></h3>
+          <p>
+            <span class="es">Herramientas y productos útiles para tiendas, operación y punto de venta.</span>
+            <span class="en">Useful tools and products for stores, operations and point of sale.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-garden">
+        <div class="category-content">
+          <h3><span class="es">Jardín y Temporada</span><span class="en">Garden & Seasonal</span></h3>
+          <p>
+            <span class="es">Productos para exterior, iluminación, temporada y consumo.</span>
+            <span class="en">Outdoor, lighting, seasonal and consumer products.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-industrial">
+        <div class="category-content">
+          <h3><span class="es">Industrial y Logística</span><span class="en">Industrial & Logistics</span></h3>
+          <p>
+            <span class="es">Soluciones de operación, carga, seguridad y manejo de mercancía.</span>
+            <span class="en">Operational, cargo, safety and merchandise handling solutions.</span>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="infrastructure" class="section light">
+<section id="catalog" class="section light">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Catálogo</span><span class="en">Catalog</span></span>
+      <h2>
+        <span class="es">Productos destacados.</span>
+        <span class="en">Featured products.</span>
+      </h2>
+      <p>
+        <span class="es">
+          Una muestra de productos disponibles para distribuidores y mayoristas.
+          Consulta el catálogo completo para ver más líneas y referencias.
+        </span>
+        <span class="en">
+          A sample of products available for distributors and wholesalers.
+          View the full catalog for more product lines and references.
+        </span>
+      </p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-storage-bags.jpg" alt="Bolsas de almacenamiento"></div>
+        <div class="product-content">
+          <small>Organización</small>
+          <h3><span class="es">Bolsas de almacenamiento</span><span class="en">Storage bags</span></h3>
+          <p><span class="es">Soluciones para organización de ropa, blancos y textiles.</span><span class="en">Solutions for organizing clothes, linens and textiles.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-organizer-cart-white.jpg" alt="Carrito organizador"></div>
+        <div class="product-content">
+          <small>Hogar</small>
+          <h3><span class="es">Carrito organizador</span><span class="en">Organizer cart</span></h3>
+          <p><span class="es">Producto práctico para hogar, oficina y espacios comerciales.</span><span class="en">Practical product for home, office and commercial spaces.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-folding-table-white.jpg" alt="Mesa plegable"></div>
+        <div class="product-content">
+          <small>Muebles</small>
+          <h3><span class="es">Mesa plegable</span><span class="en">Folding table</span></h3>
+          <p><span class="es">Mesa útil para eventos, comercio, jardín y espacios multiusos.</span><span class="en">Useful table for events, retail, garden and multipurpose spaces.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-labeler-retail.jpg" alt="Pistola etiquetadora"></div>
+        <div class="product-content">
+          <small>Comercial</small>
+          <h3><span class="es">Pistola etiquetadora</span><span class="en">Labeling gun</span></h3>
+          <p><span class="es">Herramienta para punto de venta, tiendas y operación comercial.</span><span class="en">Tool for point of sale, stores and commercial operations.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-solar-lights.jpg" alt="Luces solares"></div>
+        <div class="product-content">
+          <small>Temporada</small>
+          <h3><span class="es">Luces solares</span><span class="en">Solar lights</span></h3>
+          <p><span class="es">Producto para exterior, jardín, decoración y temporada.</span><span class="en">Product for outdoor, garden, decoration and seasonal use.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-popcorn-machine.jpg" alt="Máquina de palomitas"></div>
+        <div class="product-content">
+          <small>Equipamiento</small>
+          <h3><span class="es">Máquina de palomitas</span><span class="en">Popcorn machine</span></h3>
+          <p><span class="es">Equipo para negocio, eventos, tiendas y entretenimiento.</span><span class="en">Equipment for business, events, stores and entertainment.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-pallet-jack.jpg" alt="Patín hidráulico"></div>
+        <div class="product-content">
+          <small>Industrial</small>
+          <h3><span class="es">Patín hidráulico</span><span class="en">Pallet jack</span></h3>
+          <p><span class="es">Solución para carga, almacén y manejo de mercancía.</span><span class="en">Solution for cargo, warehouse and merchandise handling.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-icecream-machine.jpg" alt="Máquina de helados"></div>
+        <div class="product-content">
+          <small>Comercial</small>
+          <h3><span class="es">Máquina de helados</span><span class="en">Ice cream machine</span></h3>
+          <p><span class="es">Equipo para negocio, alimentos y puntos de venta.</span><span class="en">Equipment for business, food service and points of sale.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog-cta">
+      <a class="btn gold" href="assets/catalogo-rimseg.pdf" target="_blank">
+        <span class="es">Abrir catálogo completo</span>
+        <span class="en">Open full catalog</span>
+      </a>
+      <a class="btn outline-dark" href="mailto:ventas@rimseg.com">
+        <span class="es">Solicitar cotización</span>
+        <span class="en">Request quote</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="infrastructure" class="section">
   <div class="container">
     <div class="section-title">
       <span class="label"><span class="es">Infraestructura</span><span class="en">Infrastructure</span></span>
@@ -1003,47 +1235,44 @@
       </p>
     </div>
 
-```
-<div class="infra-grid">
-  <div class="infra-card">
-    <div class="infra-img office"></div>
-    <div class="content">
-      <h3><span class="es">Oficinas corporativas</span><span class="en">Corporate offices</span></h3>
-      <p>
-        <span class="es">Espacio de atención y administración comercial en Naucalpan de Juárez.</span>
-        <span class="en">Commercial service and administrative space in Naucalpan de Juárez.</span>
-      </p>
-    </div>
-  </div>
+    <div class="infra-grid">
+      <div class="infra-card">
+        <div class="infra-img office"></div>
+        <div class="content">
+          <h3><span class="es">Oficinas corporativas</span><span class="en">Corporate offices</span></h3>
+          <p>
+            <span class="es">Espacio de atención y administración comercial en Naucalpan de Juárez.</span>
+            <span class="en">Commercial service and administrative space in Naucalpan de Juárez.</span>
+          </p>
+        </div>
+      </div>
 
-  <div class="infra-card">
-    <div class="infra-img warehouse"></div>
-    <div class="content">
-      <h3><span class="es">Almacén e inventario</span><span class="en">Warehouse & inventory</span></h3>
-      <p>
-        <span class="es">Capacidad de almacenamiento y manejo de productos para distribución.</span>
-        <span class="en">Storage and product handling capacity for distribution.</span>
-      </p>
-    </div>
-  </div>
+      <div class="infra-card">
+        <div class="infra-img warehouse"></div>
+        <div class="content">
+          <h3><span class="es">Almacén e inventario</span><span class="en">Warehouse & inventory</span></h3>
+          <p>
+            <span class="es">Capacidad de almacenamiento y manejo de productos para distribución.</span>
+            <span class="en">Storage and product handling capacity for distribution.</span>
+          </p>
+        </div>
+      </div>
 
-  <div class="infra-card">
-    <div class="infra-img meeting"></div>
-    <div class="content">
-      <h3><span class="es">Atención comercial</span><span class="en">Commercial service</span></h3>
-      <p>
-        <span class="es">Comunicación directa con clientes, distribuidores y proveedores.</span>
-        <span class="en">Direct communication with clients, distributors and suppliers.</span>
-      </p>
+      <div class="infra-card">
+        <div class="infra-img meeting"></div>
+        <div class="content">
+          <h3><span class="es">Atención comercial</span><span class="en">Commercial service</span></h3>
+          <p>
+            <span class="es">Comunicación directa con clientes, distribuidores y proveedores.</span>
+            <span class="en">Direct communication with clients, distributors and suppliers.</span>
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-```
-
   </div>
 </section>
 
-<section class="section">
+<section class="section light">
   <div class="container">
     <div class="section-title">
       <span class="label"><span class="es">Galería</span><span class="en">Gallery</span></span>
@@ -1053,29 +1282,26 @@
       </h2>
     </div>
 
-```
-<div class="gallery">
-  <div class="gallery-main">
-    <div>
-      <h3><span class="es">Bodega e inventario</span><span class="en">Warehouse & inventory</span></h3>
-      <p>
-        <span class="es">Capacidad operativa para manejo de productos.</span>
-        <span class="en">Operational capacity for product handling.</span>
-      </p>
+    <div class="gallery">
+      <div class="gallery-main">
+        <div>
+          <h3><span class="es">Bodega e inventario</span><span class="en">Warehouse & inventory</span></h3>
+          <p>
+            <span class="es">Capacidad operativa para manejo de productos.</span>
+            <span class="en">Operational capacity for product handling.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-side">
+        <div class="gallery-tile g1"></div>
+        <div class="gallery-tile g2"></div>
+      </div>
     </div>
-  </div>
-
-  <div class="gallery-side">
-    <div class="gallery-tile g1"></div>
-    <div class="gallery-tile g2"></div>
-  </div>
-</div>
-```
-
   </div>
 </section>
 
-<section class="section light">
+<section class="section">
   <div class="container">
     <div class="section-title">
       <span class="label"><span class="es">Proceso</span><span class="en">Process</span></span>
@@ -1085,39 +1311,36 @@
       </h2>
     </div>
 
-```
-<div class="process">
-  <div class="step">
-    <div class="step-number">1</div>
-    <h4><span class="es">Proveedor</span><span class="en">Supplier</span></h4>
-  </div>
+    <div class="process">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4><span class="es">Proveedor</span><span class="en">Supplier</span></h4>
+      </div>
 
-  <div class="step">
-    <div class="step-number">2</div>
-    <h4><span class="es">Importación</span><span class="en">Import</span></h4>
-  </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4><span class="es">Importación</span><span class="en">Import</span></h4>
+      </div>
 
-  <div class="step">
-    <div class="step-number">3</div>
-    <h4><span class="es">Inventario</span><span class="en">Inventory</span></h4>
-  </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4><span class="es">Inventario</span><span class="en">Inventory</span></h4>
+      </div>
 
-  <div class="step">
-    <div class="step-number">4</div>
-    <h4><span class="es">Distribución</span><span class="en">Distribution</span></h4>
-  </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4><span class="es">Distribución</span><span class="en">Distribution</span></h4>
+      </div>
 
-  <div class="step">
-    <div class="step-number">5</div>
-    <h4><span class="es">Cliente</span><span class="en">Client</span></h4>
-  </div>
-</div>
-```
-
+      <div class="step">
+        <div class="step-number">5</div>
+        <h4><span class="es">Cliente</span><span class="en">Client</span></h4>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section light">
   <div class="container">
     <div class="video-box">
       <video controls muted playsinline>
@@ -1143,65 +1366,62 @@
           <span class="en">Commercial contact</span>
         </h2>
 
-```
-    <p>
-      <span class="es">
-        Para información comercial, ventas, compras, atención a clientes
-        o propuestas de abastecimiento, contáctanos por correo electrónico.
-      </span>
-      <span class="en">
-        For commercial information, sales, purchasing, customer service
-        or supply proposals, contact us by email.
-      </span>
-    </p>
+        <p>
+          <span class="es">
+            Para información comercial, ventas, compras, atención a clientes
+            o propuestas de abastecimiento, contáctanos por correo electrónico.
+          </span>
+          <span class="en">
+            For commercial information, sales, purchasing, customer service
+            or supply proposals, contact us by email.
+          </span>
+        </p>
 
-    <a class="btn gold" href="mailto:info@rimseg.com">
-      info@rimseg.com
-    </a>
-  </div>
-
-  <div class="contact-info">
-    <p>
-      <strong><span class="es">Razón social</span><span class="en">Legal name</span></strong>
-      CORPORATIVO COMERCIAL RIMSEG, S.A. de C.V.
-    </p>
-
-    <p>
-      <strong>RFC</strong>
-      CCR180816J26
-    </p>
-
-    <p>
-      <strong><span class="es">Oficinas corporativas</span><span class="en">Corporate offices</span></strong>
-      La Montaña 28-A, Col. Los Pastores,<br>
-      Naucalpan de Juárez, Estado de México, C.P. 53340
-    </p>
-
-    <div class="email-list">
-      <div class="email-item">
-        <strong><span class="es">Información general</span><span class="en">General information</span></strong>
-        <a href="mailto:info@rimseg.com">info@rimseg.com</a>
+        <a class="btn gold" href="mailto:info@rimseg.com">
+          info@rimseg.com
+        </a>
       </div>
 
-      <div class="email-item">
-        <strong><span class="es">Ventas</span><span class="en">Sales</span></strong>
-        <a href="mailto:ventas@rimseg.com">ventas@rimseg.com</a>
-      </div>
+      <div class="contact-info">
+        <p>
+          <strong><span class="es">Razón social</span><span class="en">Legal name</span></strong>
+          CORPORATIVO COMERCIAL RIMSEG, S.A. de C.V.
+        </p>
 
-      <div class="email-item">
-        <strong><span class="es">Compras</span><span class="en">Purchasing</span></strong>
-        <a href="mailto:compras@rimseg.com">compras@rimseg.com</a>
-      </div>
+        <p>
+          <strong>RFC</strong>
+          CCR180816J26
+        </p>
 
-      <div class="email-item">
-        <strong><span class="es">Atención a clientes</span><span class="en">Customer service</span></strong>
-        <a href="mailto:atencionalclientes@rimseg.com">atencionalclientes@rimseg.com</a>
+        <p>
+          <strong><span class="es">Oficinas corporativas</span><span class="en">Corporate offices</span></strong>
+          La Montaña 28-A, Col. Los Pastores,<br>
+          Naucalpan de Juárez, Estado de México, C.P. 53340
+        </p>
+
+        <div class="email-list">
+          <div class="email-item">
+            <strong><span class="es">Información general</span><span class="en">General information</span></strong>
+            <a href="mailto:info@rimseg.com">info@rimseg.com</a>
+          </div>
+
+          <div class="email-item">
+            <strong><span class="es">Ventas</span><span class="en">Sales</span></strong>
+            <a href="mailto:ventas@rimseg.com">ventas@rimseg.com</a>
+          </div>
+
+          <div class="email-item">
+            <strong><span class="es">Compras</span><span class="en">Purchasing</span></strong>
+            <a href="mailto:compras@rimseg.com">compras@rimseg.com</a>
+          </div>
+
+          <div class="email-item">
+            <strong><span class="es">Atención a clientes</span><span class="en">Customer service</span></strong>
+            <a href="mailto:atencionalclientes@rimseg.com">atencionalclientes@rimseg.com</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-```
-
   </div>
 </section>
 

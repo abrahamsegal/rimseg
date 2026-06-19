@@ -6,8 +6,8 @@
 
   <title>RIMSEG | Importadora y Comercializadora</title>
 
-  <meta name="description" content="RIMSEG es una empresa mexicana dedicada a la importación, comercialización y distribución de productos para distribuidores, mayoristas y empresas." />
-  <meta name="keywords" content="RIMSEG, importadora, comercializadora, distribuidora, textiles, telas, muebles, mesas, productos para mayoristas, distribuidores, México" />
+  <meta name="description" content="RIMSEG es una empresa mexicana dedicada a importación, comercialización y distribución de ropa, telas, textiles, hogar, equipamiento y soluciones para distribuidores." />
+  <meta name="keywords" content="RIMSEG, importadora, comercializadora, distribuidora, ropa, textiles, telas, catálogo textil, muebles, mesas, productos para mayoristas, distribuidores, México" />
   <meta name="author" content="RIMSEG" />
 
   <style>
@@ -124,7 +124,7 @@
     .hero {
       background:
         linear-gradient(120deg, rgba(13,35,64,0.92), rgba(13,35,64,0.70)),
-        url("assets/warehouse-wide.jpg");
+        url("assets/barco-contenedores.png");
       background-size: cover;
       background-position: center;
       color: white;
@@ -194,6 +194,16 @@
     .btn.outline:hover {
       border-color: var(--gold);
       color: var(--gold);
+    }
+
+    .btn.whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn.whatsapp:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
     }
 
     .hero-card {
@@ -315,7 +325,7 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
 
@@ -354,6 +364,84 @@
 
     .card p {
       color: var(--gray);
+    }
+
+    .textile-showcase {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .textile-panel {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--gold);
+    }
+
+    .textile-logo {
+      width: 142px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 12px;
+      margin-bottom: 20px;
+    }
+
+    .textile-panel h3 {
+      color: var(--navy);
+      font-size: 28px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+
+    .textile-panel p {
+      color: #344054;
+      margin-bottom: 16px;
+    }
+
+    .textile-points {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .textile-points li {
+      padding: 13px 14px;
+      background: var(--light);
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      color: #344054;
+      font-weight: 700;
+    }
+
+    .textile-image {
+      min-height: 430px;
+      border-radius: 16px;
+      background:
+        linear-gradient(180deg, rgba(13,35,64,0.05), rgba(13,35,64,0.78)),
+        url("assets/warehouse-rolls.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .textile-image h3 {
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+
+    .textile-products {
+      margin-top: 28px;
     }
 
     .categories {
@@ -483,6 +571,18 @@
       font-size: 14px;
     }
 
+    .sku {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(13,35,64,0.08);
+      color: var(--navy);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .4px;
+    }
+
     .catalog-cta {
       margin-top: 36px;
       text-align: center;
@@ -519,15 +619,15 @@
     }
 
     .office {
-      background-image: url("assets/office-exterior.jpg");
+      background-image: url("assets/bodega-rimseg-superior.png");
     }
 
     .warehouse {
-      background-image: url("assets/warehouse-wide.jpg");
+      background-image: url("assets/camion-logistica.png");
     }
 
     .meeting {
-      background-image: url("assets/office-meeting.jpg");
+      background-image: url("assets/barco-contenedores.png");
     }
 
     .reception {
@@ -560,7 +660,7 @@
       min-height: 430px;
       background:
         linear-gradient(180deg, rgba(13,35,64,0.05), rgba(13,35,64,0.75)),
-        url("assets/warehouse-wide.jpg");
+        url("assets/bodega-rimseg-superior.png");
       background-size: cover;
       background-position: center;
       overflow: hidden;
@@ -591,11 +691,11 @@
     }
 
     .g1 {
-      background-image: url("assets/warehouse-rolls.jpg");
+      background-image: url("assets/barco-contenedores.png");
     }
 
     .g2 {
-      background-image: url("assets/office-reception.jpg");
+      background-image: url("assets/camion-logistica.png");
     }
 
     .process {
@@ -631,36 +731,6 @@
       font-size: 17px;
     }
 
-    .video-box {
-      background: white;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      border: 1px solid var(--border);
-    }
-
-    .video-box video {
-      width: 100%;
-      display: block;
-      max-height: 600px;
-      background: #000;
-    }
-
-    .video-content {
-      padding: 24px;
-      text-align: center;
-    }
-
-    .video-content h3 {
-      color: var(--navy);
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
-
-    .video-content p {
-      color: var(--gray);
-    }
-
     .contact {
       background: linear-gradient(135deg, var(--navy), var(--navy2));
       color: white;
@@ -681,6 +751,11 @@
     .contact p {
       color: rgba(255,255,255,0.86);
       margin-bottom: 14px;
+    }
+
+    .contact .btn {
+      margin-right: 10px;
+      margin-top: 8px;
     }
 
     .contact-info {
@@ -714,6 +789,30 @@
     .email-item:last-child {
       border-bottom: none;
       padding-bottom: 0;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25d366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 17px;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+      z-index: 1200;
+      border: 3px solid white;
+    }
+
+    .whatsapp-float:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
     }
 
     footer {
@@ -766,7 +865,8 @@
       .hero-inner,
       .about-grid,
       .contact,
-      .gallery {
+      .gallery,
+      .textile-showcase {
         grid-template-columns: 1fr;
       }
 
@@ -828,6 +928,7 @@
         <a href="#about"><span class="es">Nosotros</span><span class="en">About</span></a>
         <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
         <a href="#categories"><span class="es">Categorías</span><span class="en">Categories</span></a>
+        <a href="#textiles"><span class="es">Textil</span><span class="en">Textiles</span></a>
         <a href="#catalog"><span class="es">Catálogo</span><span class="en">Catalog</span></a>
         <a href="#infrastructure"><span class="es">Infraestructura</span><span class="en">Infrastructure</span></a>
         <a href="#contact"><span class="es">Contacto</span><span class="en">Contact</span></a>
@@ -850,20 +951,20 @@
       </div>
 
       <h1>
-        <span class="es">Soluciones de abastecimiento para distribuidores.</span>
-        <span class="en">Supply solutions for distributors.</span>
+        <span class="es">Importación, textil y abastecimiento para distribuidores.</span>
+        <span class="en">Imports, textiles and supply solutions for distributors.</span>
       </h1>
 
       <p>
         <span class="es">
           RIMSEG es una empresa mexicana dedicada a la importación,
           comercialización y distribución de productos para el mercado nacional,
-          con atención a distribuidores, mayoristas y empresas.
+          con líneas de ropa, telas, textiles, hogar, equipamiento y logística.
         </span>
         <span class="en">
           RIMSEG is a Mexican company focused on importing, commercializing
-          and distributing products for the national market, serving distributors,
-          wholesalers and businesses.
+          and distributing products for the national market, with clothing,
+          fabrics, textiles, home goods, equipment and logistics lines.
         </span>
       </p>
 
@@ -876,6 +977,15 @@
         <a class="btn outline" href="assets/catalogo-rimseg.pdf" target="_blank">
           <span class="es">Ver catálogo</span>
           <span class="en">View catalog</span>
+        </a>
+
+        <a class="btn outline" href="assets/catalogo-textil-rimseg.pdf" target="_blank">
+          <span class="es">Catálogo textil</span>
+          <span class="en">Textile catalog</span>
+        </a>
+
+        <a class="btn whatsapp" href="https://wa.me/5215539133302" target="_blank">
+          WhatsApp
         </a>
       </div>
     </div>
@@ -890,7 +1000,7 @@
         <li><span class="es">Importación internacional</span><span class="en">International imports</span></li>
         <li><span class="es">Comercialización mayorista</span><span class="en">Wholesale commercialization</span></li>
         <li><span class="es">Distribución nacional</span><span class="en">National distribution</span></li>
-        <li><span class="es">Textiles, organización, muebles y equipamiento</span><span class="en">Textiles, organization, furniture and equipment</span></li>
+        <li><span class="es">Textiles, ropa, telas, organización y equipamiento</span><span class="en">Textiles, clothing, fabrics, organization and equipment</span></li>
       </ul>
     </div>
   </div>
@@ -922,13 +1032,13 @@
         <p>
           <span class="es">
             RIMSEG se especializa en la importación y comercialización de productos
-            para distribuidores, con enfoque en textiles, organización, muebles,
-            mesas, artículos para el hogar, consumo y equipamiento comercial.
+            para distribuidores, con enfoque en ropa, telas, textiles, organización,
+            muebles, artículos para el hogar y equipamiento comercial.
           </span>
           <span class="en">
             RIMSEG specializes in importing and commercializing products for
-            distributors, with a focus on textiles, organization, furniture,
-            tables, home goods, consumer products and commercial equipment.
+            distributors, with a focus on clothing, fabrics, textiles,
+            organization, furniture, home goods and commercial equipment.
           </span>
         </p>
         <p>
@@ -1020,6 +1130,15 @@
           <span class="en">Supply solutions to serve commercial needs across Mexico.</span>
         </p>
       </div>
+
+      <div class="card">
+        <div class="icon">TX</div>
+        <h3><span class="es">Textil y ropa</span><span class="en">Textiles & clothing</span></h3>
+        <p>
+          <span class="es">Catálogo de ropa, telas y referencias textiles para distribuidores y mayoristas.</span>
+          <span class="en">Catalog of clothing, fabrics and textile references for distributors and wholesalers.</span>
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -1034,12 +1153,12 @@
       </h2>
       <p>
         <span class="es">
-          Trabajamos con artículos de organización, hogar, muebles, mesas,
-          equipamiento comercial, jardín, temporada y soluciones industriales.
+          Trabajamos con ropa, telas, textiles, organización, hogar, muebles,
+          equipamiento comercial, logística, temporada y soluciones industriales.
         </span>
         <span class="en">
-          We work with organization, home, furniture, tables, commercial equipment,
-          garden, seasonal and industrial solution products.
+          We work with clothing, fabrics, textiles, organization, home, furniture,
+          commercial equipment, logistics, seasonal and industrial solutions.
         </span>
       </p>
     </div>
@@ -1047,10 +1166,10 @@
     <div class="categories">
       <div class="category cat-textiles">
         <div class="category-content">
-          <h3><span class="es">Textiles y Organización</span><span class="en">Textiles & Organization</span></h3>
+          <h3><span class="es">Ropa, Telas y Textiles</span><span class="en">Clothing, Fabrics & Textiles</span></h3>
           <p>
-            <span class="es">Soluciones para ropa, almacenamiento, textiles y organización del hogar.</span>
-            <span class="en">Solutions for clothing, storage, textiles and home organization.</span>
+            <span class="es">Líneas textiles para ropa, telas, blancos, almacenamiento y distribución.</span>
+            <span class="en">Textile lines for clothing, fabrics, linens, storage and distribution.</span>
           </p>
         </div>
       </div>
@@ -1108,6 +1227,117 @@
   </div>
 </section>
 
+<section id="textiles" class="section light">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">División textil</span><span class="en">Textile division</span></span>
+      <h2>
+        <span class="es">Ropa, telas y soluciones textiles para mayoreo.</span>
+        <span class="en">Clothing, fabrics and textile solutions for wholesale.</span>
+      </h2>
+      <p>
+        <span class="es">
+          Integramos catálogo textil con referencias RIMSEG, líneas para distribución,
+          organización de inventario y atención directa para cotización por volumen.
+        </span>
+        <span class="en">
+          We integrate textile catalog references, distribution lines, inventory
+          organization and direct support for volume quotations.
+        </span>
+      </p>
+    </div>
+
+    <div class="textile-showcase">
+      <div class="textile-panel">
+        <img class="textile-logo" src="assets/logo.png" alt="RIMSEG Logo">
+        <h3>
+          <span class="es">Catálogo textil RIMSEG</span>
+          <span class="en">RIMSEG textile catalog</span>
+        </h3>
+        <p>
+          <span class="es">
+            El catálogo de ropa queda incluido en el paquete del sitio como documento
+            descargable, acompañado por claves de serie RIMSEG para identificar las
+            líneas principales en la página.
+          </span>
+          <span class="en">
+            The clothing catalog is included in the site package as a downloadable
+            document, supported by RIMSEG serial references to identify key lines.
+          </span>
+        </p>
+
+        <ul class="textile-points">
+          <li><span class="es">Ropa y accesorios textiles para canales comerciales</span><span class="en">Clothing and textile accessories for retail channels</span></li>
+          <li><span class="es">Telas, blancos y productos de organización</span><span class="en">Fabrics, linens and organization products</span></li>
+          <li><span class="es">Referencias RIMSEG para control de catálogo y cotización</span><span class="en">RIMSEG references for catalog control and quoting</span></li>
+        </ul>
+
+        <div class="catalog-cta" style="text-align:left; margin-top:24px;">
+          <a class="btn gold" href="assets/catalogo-textil-rimseg.pdf" target="_blank">
+            <span class="es">Abrir catálogo textil</span>
+            <span class="en">Open textile catalog</span>
+          </a>
+          <a class="btn whatsapp" href="https://wa.me/5215539133302" target="_blank">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="textile-image">
+        <div>
+          <h3><span class="es">Textiles con respaldo logístico</span><span class="en">Textiles with logistics support</span></h3>
+          <p>
+            <span class="es">Mercancía organizada para distribución, mayoreo y abastecimiento comercial.</span>
+            <span class="en">Organized merchandise for distribution, wholesale and commercial supply.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-grid textile-products">
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-hangers-textile.jpg" alt="Ganchos y accesorios textiles"></div>
+        <div class="product-content">
+          <small>RIM-TEX-2401 · Textil</small>
+          <h3><span class="es">Ganchos y accesorios textiles</span><span class="en">Hangers & textile accessories</span></h3>
+          <p><span class="es">Línea para exhibición, organización y manejo de ropa.</span><span class="en">Line for display, organization and clothing handling.</span></p>
+          <span class="sku">Serie RIM-TEX-2401</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-storage-bags.jpg" alt="Bolsas para ropa y blancos"></div>
+        <div class="product-content">
+          <small>RIM-TEX-2402 · Organización</small>
+          <h3><span class="es">Bolsas para ropa y blancos</span><span class="en">Clothing & linen storage bags</span></h3>
+          <p><span class="es">Solución para almacenamiento, traslado y protección de textiles.</span><span class="en">Solution for storage, transport and protection of textiles.</span></p>
+          <span class="sku">Serie RIM-TEX-2402</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-organizer-cart-black.jpg" alt="Organizador para boutique"></div>
+        <div class="product-content">
+          <small>RIM-ROP-2403 · Ropa</small>
+          <h3><span class="es">Organizador para boutique</span><span class="en">Boutique organizer</span></h3>
+          <p><span class="es">Apoyo para acomodo de prendas, accesorios y mercancía textil.</span><span class="en">Support for arranging garments, accessories and textile goods.</span></p>
+          <span class="sku">Serie RIM-ROP-2403</span>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/warehouse-rolls.jpg" alt="Telas y rollos textiles"></div>
+        <div class="product-content">
+          <small>RIM-TEL-2404 · Telas</small>
+          <h3><span class="es">Telas y rollos textiles</span><span class="en">Fabrics & textile rolls</span></h3>
+          <p><span class="es">Línea para abastecimiento comercial, confección y distribución.</span><span class="en">Line for commercial supply, manufacturing and distribution.</span></p>
+          <span class="sku">Serie RIM-TEL-2404</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="catalog" class="section light">
   <div class="container">
     <div class="section-title">
@@ -1132,72 +1362,80 @@
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-storage-bags.jpg" alt="Bolsas de almacenamiento"></div>
         <div class="product-content">
-          <small>Organización</small>
+          <small>RIM-ORG-1001 · Organización</small>
           <h3><span class="es">Bolsas de almacenamiento</span><span class="en">Storage bags</span></h3>
           <p><span class="es">Soluciones para organización de ropa, blancos y textiles.</span><span class="en">Solutions for organizing clothes, linens and textiles.</span></p>
+          <span class="sku">Serie RIM-ORG-1001</span>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-organizer-cart-white.jpg" alt="Carrito organizador"></div>
         <div class="product-content">
-          <small>Hogar</small>
+          <small>RIM-HOG-1002 · Hogar</small>
           <h3><span class="es">Carrito organizador</span><span class="en">Organizer cart</span></h3>
           <p><span class="es">Producto práctico para hogar, oficina y espacios comerciales.</span><span class="en">Practical product for home, office and commercial spaces.</span></p>
+          <span class="sku">Serie RIM-HOG-1002</span>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-folding-table-white.jpg" alt="Mesa plegable"></div>
         <div class="product-content">
-          <small>Muebles</small>
+          <small>RIM-MES-1003 · Muebles</small>
           <h3><span class="es">Mesa plegable</span><span class="en">Folding table</span></h3>
           <p><span class="es">Mesa útil para eventos, comercio, jardín y espacios multiusos.</span><span class="en">Useful table for events, retail, garden and multipurpose spaces.</span></p>
+          <span class="sku">Serie RIM-MES-1003</span>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-labeler-retail.jpg" alt="Pistola etiquetadora"></div>
         <div class="product-content">
-          <small>Comercial</small>
+          <small>RIM-COM-1004 · Comercial</small>
           <h3><span class="es">Pistola etiquetadora</span><span class="en">Labeling gun</span></h3>
           <p><span class="es">Herramienta para punto de venta, tiendas y operación comercial.</span><span class="en">Tool for point of sale, stores and commercial operations.</span></p>
+          <span class="sku">Serie RIM-COM-1004</span>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-solar-lights.jpg" alt="Luces solares"></div>
         <div class="product-content">
-          <small>Temporada</small>
+          <small>RIM-JAR-1005 · Temporada</small>
           <h3><span class="es">Luces solares</span><span class="en">Solar lights</span></h3>
           <p><span class="es">Producto para exterior, jardín, decoración y temporada.</span><span class="en">Product for outdoor, garden, decoration and seasonal use.</span></p>
+          <span class="sku">Serie RIM-JAR-1005</span>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-popcorn-machine.jpg" alt="Máquina de palomitas"></div>
         <div class="product-content">
-          <small>Equipamiento</small>
+          <small>RIM-EQP-1006 · Equipamiento</small>
           <h3><span class="es">Máquina de palomitas</span><span class="en">Popcorn machine</span></h3>
           <p><span class="es">Equipo para negocio, eventos, tiendas y entretenimiento.</span><span class="en">Equipment for business, events, stores and entertainment.</span></p>
+          <span class="sku">Serie RIM-EQP-1006</span>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-pallet-jack.jpg" alt="Patín hidráulico"></div>
         <div class="product-content">
-          <small>Industrial</small>
+          <small>RIM-IND-1007 · Industrial</small>
           <h3><span class="es">Patín hidráulico</span><span class="en">Pallet jack</span></h3>
           <p><span class="es">Solución para carga, almacén y manejo de mercancía.</span><span class="en">Solution for cargo, warehouse and merchandise handling.</span></p>
+          <span class="sku">Serie RIM-IND-1007</span>
         </div>
       </div>
 
       <div class="product-card">
         <div class="product-img"><img src="assets/catalog-icecream-machine.jpg" alt="Máquina de helados"></div>
         <div class="product-content">
-          <small>Comercial</small>
+          <small>RIM-COM-1008 · Comercial</small>
           <h3><span class="es">Máquina de helados</span><span class="en">Ice cream machine</span></h3>
           <p><span class="es">Equipo para negocio, alimentos y puntos de venta.</span><span class="en">Equipment for business, food service and points of sale.</span></p>
+          <span class="sku">Serie RIM-COM-1008</span>
         </div>
       </div>
     </div>
@@ -1207,9 +1445,16 @@
         <span class="es">Abrir catálogo completo</span>
         <span class="en">Open full catalog</span>
       </a>
+      <a class="btn gold" href="assets/catalogo-textil-rimseg.pdf" target="_blank">
+        <span class="es">Abrir catálogo textil</span>
+        <span class="en">Open textile catalog</span>
+      </a>
       <a class="btn outline-dark" href="mailto:ventas@rimseg.com">
         <span class="es">Solicitar cotización</span>
         <span class="en">Request quote</span>
+      </a>
+      <a class="btn whatsapp" href="https://wa.me/5215539133302" target="_blank">
+        WhatsApp
       </a>
     </div>
   </div>
@@ -1225,12 +1470,12 @@
       </h2>
       <p>
         <span class="es">
-          RIMSEG cuenta con instalaciones corporativas y capacidad operativa
-          para atender relaciones comerciales con distribuidores y mayoristas.
+          RIMSEG cuenta con infraestructura comercial, apoyo logístico y capacidad
+          para atender relaciones con distribuidores, mayoristas y proveedores.
         </span>
         <span class="en">
-          RIMSEG has corporate facilities and operational capacity to serve
-          commercial relationships with distributors and wholesalers.
+          RIMSEG has commercial infrastructure, logistics support and capacity
+          to serve distributors, wholesalers and suppliers.
         </span>
       </p>
     </div>
@@ -1239,10 +1484,10 @@
       <div class="infra-card">
         <div class="infra-img office"></div>
         <div class="content">
-          <h3><span class="es">Oficinas corporativas</span><span class="en">Corporate offices</span></h3>
+          <h3><span class="es">Bodega e inventario</span><span class="en">Warehouse & inventory</span></h3>
           <p>
-            <span class="es">Espacio de atención y administración comercial en Naucalpan de Juárez.</span>
-            <span class="en">Commercial service and administrative space in Naucalpan de Juárez.</span>
+            <span class="es">Espacio operativo para organización, control y preparación de mercancía.</span>
+            <span class="en">Operational space for organization, control and preparation of merchandise.</span>
           </p>
         </div>
       </div>
@@ -1250,10 +1495,10 @@
       <div class="infra-card">
         <div class="infra-img warehouse"></div>
         <div class="content">
-          <h3><span class="es">Almacén e inventario</span><span class="en">Warehouse & inventory</span></h3>
+          <h3><span class="es">Logística terrestre</span><span class="en">Ground logistics</span></h3>
           <p>
-            <span class="es">Capacidad de almacenamiento y manejo de productos para distribución.</span>
-            <span class="en">Storage and product handling capacity for distribution.</span>
+            <span class="es">Coordinación de movimiento, entrega y distribución para canales comerciales.</span>
+            <span class="en">Coordination of movement, delivery and distribution for commercial channels.</span>
           </p>
         </div>
       </div>
@@ -1261,10 +1506,10 @@
       <div class="infra-card">
         <div class="infra-img meeting"></div>
         <div class="content">
-          <h3><span class="es">Atención comercial</span><span class="en">Commercial service</span></h3>
+          <h3><span class="es">Importación y contenedores</span><span class="en">Imports & containers</span></h3>
           <p>
-            <span class="es">Comunicación directa con clientes, distribuidores y proveedores.</span>
-            <span class="en">Direct communication with clients, distributors and suppliers.</span>
+            <span class="es">Apoyo a operaciones de abastecimiento con visión internacional y comercial.</span>
+            <span class="en">Support for supply operations with an international and commercial vision.</span>
           </p>
         </div>
       </div>
@@ -1275,20 +1520,20 @@
 <section class="section light">
   <div class="container">
     <div class="section-title">
-      <span class="label"><span class="es">Galería</span><span class="en">Gallery</span></span>
-      <h2>
-        <span class="es">Instalaciones RIMSEG.</span>
-        <span class="en">RIMSEG facilities.</span>
-      </h2>
+        <span class="label"><span class="es">Galería logística</span><span class="en">Logistics gallery</span></span>
+        <h2>
+          <span class="es">Bodega, transporte e importación.</span>
+          <span class="en">Warehouse, transport and imports.</span>
+        </h2>
     </div>
 
     <div class="gallery">
       <div class="gallery-main">
         <div>
-          <h3><span class="es">Bodega e inventario</span><span class="en">Warehouse & inventory</span></h3>
+          <h3><span class="es">Operación y visibilidad logística</span><span class="en">Operations & logistics visibility</span></h3>
           <p>
-            <span class="es">Capacidad operativa para manejo de productos.</span>
-            <span class="en">Operational capacity for product handling.</span>
+            <span class="es">Imágenes de apoyo para mostrar capacidad, movimiento y abastecimiento.</span>
+            <span class="en">Supporting images to show capacity, movement and supply.</span>
           </p>
         </div>
       </div>
@@ -1340,23 +1585,6 @@
   </div>
 </section>
 
-<section class="section light">
-  <div class="container">
-    <div class="video-box">
-      <video controls muted playsinline>
-        <source src="assets/warehouse-video.mp4" type="video/mp4">
-      </video>
-      <div class="video-content">
-        <h3><span class="es">Vista de operación</span><span class="en">Operational view</span></h3>
-        <p>
-          <span class="es">Material e inventario disponible para operación comercial.</span>
-          <span class="en">Materials and inventory available for commercial operation.</span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="contact" class="section">
   <div class="container">
     <div class="contact">
@@ -1369,16 +1597,19 @@
         <p>
           <span class="es">
             Para información comercial, ventas, compras, atención a clientes
-            o propuestas de abastecimiento, contáctanos por correo electrónico.
+            o propuestas de abastecimiento, contáctanos por correo electrónico o WhatsApp.
           </span>
           <span class="en">
             For commercial information, sales, purchasing, customer service
-            or supply proposals, contact us by email.
+            or supply proposals, contact us by email or WhatsApp.
           </span>
         </p>
 
         <a class="btn gold" href="mailto:info@rimseg.com">
           info@rimseg.com
+        </a>
+        <a class="btn whatsapp" href="https://wa.me/5215539133302" target="_blank">
+          +52 1 55 3913 3302
         </a>
       </div>
 
@@ -1419,11 +1650,20 @@
             <strong><span class="es">Atención a clientes</span><span class="en">Customer service</span></strong>
             <a href="mailto:atencionalclientes@rimseg.com">atencionalclientes@rimseg.com</a>
           </div>
+
+          <div class="email-item">
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/5215539133302" target="_blank">+52 1 55 3913 3302</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<a class="whatsapp-float" href="https://wa.me/5215539133302" target="_blank" aria-label="Contactar a RIMSEG por WhatsApp">
+  WA
+</a>
 
 <footer>
   © 2026 RIMSEG · CORPORATIVO COMERCIAL RIMSEG, S.A. de C.V. ·

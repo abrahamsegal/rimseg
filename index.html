@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>RIMSEG | Importadora y Comercializadora</title>
+
+  <meta name="description" content="RIMSEG es una empresa mexicana dedicada a la importación, comercialización y distribución de productos para distribuidores, mayoristas y empresas." />
+  <meta name="keywords" content="RIMSEG, importadora, comercializadora, distribuidora, textiles, telas, muebles, mesas, productos para mayoristas, distribuidores, México" />
+  <meta name="author" content="RIMSEG" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0d2340;
+      --navy2: #102f57;
+      --navy3: #07182c;
+      --gold: #c9a227;
+      --gold2: #e1bd43;
+      --light: #f5f7fa;
+      --white: #ffffff;
+      --gray: #667085;
+      --dark: #1f2933;
+      --border: #e5eaf0;
+      --shadow: 0 12px 35px rgba(13,35,64,0.10);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    header {
+      width: 100%;
+      background: rgba(13, 35, 64, 0.98);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.16);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 11px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 130px;
+    }
+
+    .brand img {
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+      background: white;
+      border-radius: 8px;
+      padding: 4px 8px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      opacity: 0.92;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .lang-buttons {
+      display: flex;
+      gap: 8px;
+      margin-left: 18px;
+    }
+
+    .lang-buttons button {
+      border: 1px solid rgba(255,255,255,0.35);
+      background: transparent;
+      color: white;
+      padding: 7px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .lang-buttons button.active {
+      background: var(--gold);
+      color: var(--navy);
+      border-color: var(--gold);
+    }
+
+    .hero {
+      background:
+        linear-gradient(120deg, rgba(13,35,64,0.92), rgba(13,35,64,0.70)),
+        url("assets/warehouse-wide.jpg");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 112px 22px 100px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .hero h1 {
+      font-size: 60px;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 720px;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 7px;
+      font-weight: 900;
+      transition: 0.25s ease;
+    }
+
+    .btn.gold {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    .btn.gold:hover {
+      background: var(--gold2);
+      transform: translateY(-2px);
+    }
+
+    .btn.outline {
+      border: 1px solid rgba(255,255,255,0.55);
+      color: white;
+    }
+
+    .btn.outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      padding: 30px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card h3 {
+      color: var(--gold);
+      margin-bottom: 18px;
+      font-size: 22px;
+    }
+
+    .hero-card ul {
+      list-style: none;
+    }
+
+    .hero-card li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.93);
+    }
+
+    .hero-card li:last-child {
+      border-bottom: none;
+    }
+
+    .section {
+      padding: 85px 22px;
+    }
+
+    .section.light {
+      background: var(--light);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title span.label {
+      color: var(--gold);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    .section-title h2 {
+      color: var(--navy);
+      font-size: 38px;
+      margin-top: 8px;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .section-title p {
+      max-width: 800px;
+      margin: auto;
+      color: var(--gray);
+      font-size: 17px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: white;
+      padding: 34px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--gold);
+    }
+
+    .about-box h3 {
+      color: var(--navy);
+      font-size: 27px;
+      margin-bottom: 16px;
+    }
+
+    .about-box p {
+      color: #344054;
+      margin-bottom: 14px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .stat {
+      background: var(--navy);
+      color: white;
+      padding: 28px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong {
+      color: var(--gold);
+      display: block;
+      font-size: 32px;
+      margin-bottom: 5px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      transition: 0.25s ease;
+      border: 1px solid var(--border);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 45px rgba(13,35,64,0.14);
+    }
+
+    .icon {
+      width: 54px;
+      height: 54px;
+      background: rgba(201,162,39,0.14);
+      color: var(--gold);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: var(--gray);
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .category {
+      min-height: 290px;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+
+    .category::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13,35,64,0.10), rgba(13,35,64,0.92));
+    }
+
+    .category-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .category h3 {
+      font-size: 26px;
+      margin-bottom: 8px;
+    }
+
+    .category p {
+      color: rgba(255,255,255,0.9);
+      font-size: 16px;
+    }
+
+    .cat-textiles {
+      background-image: url("assets/category-textiles-organizacion.jpg");
+    }
+
+    .cat-furniture {
+      background-image: url("assets/category-muebles-mesas.jpg");
+    }
+
+    .cat-home {
+      background-image: url("assets/category-hogar-organizacion.jpg");
+    }
+
+    .cat-commercial {
+      background-image: url("assets/category-equipamiento-comercial.jpg");
+    }
+
+    .cat-garden {
+      background-image: url("assets/category-jardin-temporada.jpg");
+    }
+
+    .cat-industrial {
+      background-image: url("assets/category-industrial.jpg");
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: .25s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(13,35,64,0.14);
+    }
+
+    .product-img {
+      height: 225px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .product-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 12px;
+      background: #fff;
+    }
+
+    .product-content {
+      padding: 18px;
+    }
+
+    .product-content small {
+      color: var(--gold);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .product-content h3 {
+      color: var(--navy);
+      margin-top: 5px;
+      margin-bottom: 8px;
+      font-size: 18px;
+      line-height: 1.25;
+    }
+
+    .product-content p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    .catalog-cta {
+      margin-top: 36px;
+      text-align: center;
+    }
+
+    .catalog-cta .btn.outline-dark {
+      border: 1px solid var(--navy);
+      color: var(--navy);
+    }
+
+    .catalog-cta .btn.outline-dark:hover {
+      background: var(--navy);
+      color: white;
+    }
+
+    .infra-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .infra-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .infra-img {
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .office {
+      background-image: url("assets/office-exterior.jpg");
+    }
+
+    .warehouse {
+      background-image: url("assets/warehouse-wide.jpg");
+    }
+
+    .meeting {
+      background-image: url("assets/office-meeting.jpg");
+    }
+
+    .reception {
+      background-image: url("assets/office-reception.jpg");
+    }
+
+    .infra-card div.content {
+      padding: 24px;
+    }
+
+    .infra-card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 21px;
+    }
+
+    .infra-card p {
+      color: var(--gray);
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .gallery-main {
+      border-radius: 18px;
+      min-height: 430px;
+      background:
+        linear-gradient(180deg, rgba(13,35,64,0.05), rgba(13,35,64,0.75)),
+        url("assets/warehouse-wide.jpg");
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-main h3 {
+      font-size: 30px;
+      margin-bottom: 6px;
+    }
+
+    .gallery-side {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .gallery-tile {
+      min-height: 203px;
+      border-radius: 18px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: var(--shadow);
+    }
+
+    .g1 {
+      background-image: url("assets/warehouse-rolls.jpg");
+    }
+
+    .g2 {
+      background-image: url("assets/office-reception.jpg");
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      text-align: center;
+    }
+
+    .step {
+      background: white;
+      padding: 24px 16px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 25px rgba(13,35,64,0.06);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      background: var(--gold);
+      color: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 14px;
+      font-weight: 900;
+    }
+
+    .step h4 {
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .video-box {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .video-box video {
+      width: 100%;
+      display: block;
+      max-height: 600px;
+      background: #000;
+    }
+
+    .video-content {
+      padding: 24px;
+      text-align: center;
+    }
+
+    .video-content h3 {
+      color: var(--navy);
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .video-content p {
+      color: var(--gray);
+    }
+
+    .contact {
+      background: linear-gradient(135deg, var(--navy), var(--navy2));
+      color: white;
+      border-radius: 22px;
+      padding: 45px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 35px;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .contact h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: rgba(255,255,255,0.86);
+      margin-bottom: 14px;
+    }
+
+    .contact-info {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.13);
+      padding: 28px;
+      border-radius: 16px;
+    }
+
+    .contact-info strong {
+      color: var(--gold);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contact-info a {
+      color: white;
+    }
+
+    .email-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .email-item {
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .email-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+
+    .logistics-hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 28px;
+    }
+
+    .logistics-main,
+    .logistics-card {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+      background: white;
+    }
+
+    .logistics-main img,
+    .logistics-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 320px;
+    }
+
+    .logistics-stack {
+      display: grid;
+      gap: 24px;
+    }
+
+    .logistics-card {
+      position: relative;
+      min-height: 230px;
+    }
+
+    .photo-label {
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      background: rgba(13,35,64,0.92);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 900;
+      border-left: 4px solid var(--gold);
+    }
+
+    .textile-feature {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: center;
+      margin-bottom: 34px;
+    }
+
+    .textile-feature img {
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      background: white;
+      border: 1px solid var(--border);
+    }
+
+    .textile-box {
+      background: white;
+      border-radius: 18px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+      border-top: 5px solid var(--gold);
+    }
+
+    .textile-box h3 {
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+
+    .textile-box p {
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+
+    .textile-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+
+    .textile-tags span {
+      background: rgba(201,162,39,0.14);
+      color: var(--navy);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    .textile-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .textile-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .textile-card img {
+      width: 100%;
+      height: 265px;
+      object-fit: cover;
+      object-position: top center;
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .textile-card div {
+      padding: 16px;
+    }
+
+    .textile-card small {
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .textile-card h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin-top: 5px;
+      line-height: 1.25;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 20px;
+      bottom: 22px;
+      background: #25d366;
+      color: white;
+      padding: 13px 18px;
+      border-radius: 999px;
+      z-index: 1500;
+      font-weight: 900;
+      box-shadow: 0 12px 30px rgba(0,0,0,.22);
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: var(--navy3);
+      color: rgba(255,255,255,0.8);
+      padding: 28px 22px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .en {
+      display: none;
+    }
+
+    body.english .es {
+      display: none;
+    }
+
+    body.english .en {
+      display: inline;
+    }
+
+    body.english .en-block {
+      display: block;
+    }
+
+    body:not(.english) .en-block {
+      display: none;
+    }
+
+    body.english .es-block {
+      display: none;
+    }
+
+    body:not(.english) .es-block {
+      display: block;
+    }
+
+    @media (max-width: 1100px) {
+      .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 980px) {
+      nav {
+        display: none;
+      }
+
+      .hero-inner,
+      .about-grid,
+      .contact,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .cards,
+      .infra-grid,
+      .categories,
+      .process,
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .brand img {
+        height: 50px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero {
+        padding: 90px 18px 80px;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .section {
+        padding: 65px 18px;
+      }
+
+      .section-title h2 {
+        font-size: 30px;
+      }
+
+      .contact {
+        padding: 30px 22px;
+      }
+    }
+  
+    @media (max-width: 980px) {
+      .logistics-hero,
+      .textile-feature,
+      .textile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .textile-card img {
+        height: 340px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="assets/logo.png" alt="RIMSEG Logo">
+    </div>
+
+    <div style="display:flex; align-items:center;">
+      <nav>
+        <a href="#about"><span class="es">Nosotros</span><span class="en">About</span></a>
+        <a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a>
+        <a href="#categories"><span class="es">Categorías</span><span class="en">Categories</span></a>
+        <a href="#textil"><span class="es">Textil</span><span class="en">Textile</span></a>
+        <a href="#logistica"><span class="es">Logística</span><span class="en">Logistics</span></a>
+        <a href="#catalog"><span class="es">Catálogo</span><span class="en">Catalog</span></a>
+        <a href="#infrastructure"><span class="es">Infraestructura</span><span class="en">Infrastructure</span></a>
+        <a href="#contact"><span class="es">Contacto</span><span class="en">Contact</span></a>
+      </nav>
+
+      <div class="lang-buttons">
+        <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+        <button id="btn-en" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">
+        <span class="es">Importadora y Comercializadora</span>
+        <span class="en">Importer & Commercial Distributor</span>
+      </div>
+
+      <h1>
+        <span class="es">Soluciones de abastecimiento para distribuidores.</span>
+        <span class="en">Supply solutions for distributors.</span>
+      </h1>
+
+      <p>
+        <span class="es">
+          RIMSEG es una empresa mexicana dedicada a la importación,
+          comercialización y distribución de productos para el mercado nacional,
+          con atención a distribuidores, mayoristas y empresas.
+        </span>
+        <span class="en">
+          RIMSEG is a Mexican company focused on importing, commercializing
+          and distributing products for the national market, serving distributors,
+          wholesalers and businesses.
+        </span>
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn gold" href="https://wa.me/5215539133302?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20RIMSEG" target="_blank" rel="noopener">
+          <span class="es">Contactar por WhatsApp</span>
+          <span class="en">Contact via WhatsApp</span>
+        </a>
+
+        <a class="btn outline" href="assets/catalogo-textil-rimseg.pdf" target="_blank">
+          <span class="es">Ver catálogo textil</span>
+          <span class="en">View textile catalog</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>
+        <span class="es">Áreas principales</span>
+        <span class="en">Main areas</span>
+      </h3>
+
+      <ul>
+        <li><span class="es">Importación internacional</span><span class="en">International imports</span></li>
+        <li><span class="es">Comercialización mayorista</span><span class="en">Wholesale commercialization</span></li>
+        <li><span class="es">Distribución nacional</span><span class="en">National distribution</span></li>
+        <li><span class="es">Textiles, organización, muebles y equipamiento</span><span class="en">Textiles, organization, furniture and equipment</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Quiénes somos</span><span class="en">Who we are</span></span>
+      <h2>
+        <span class="es">Empresa mexicana con operación comercial desde 2018.</span>
+        <span class="en">A Mexican company operating commercially since 2018.</span>
+      </h2>
+      <p>
+        <span class="es">
+          CORPORATIVO COMERCIAL RIMSEG, S.A. de C.V. trabaja con distribuidores,
+          mayoristas y empresas que requieren soluciones confiables de abastecimiento.
+        </span>
+        <span class="en">
+          CORPORATIVO COMERCIAL RIMSEG, S.A. de C.V. works with distributors,
+          wholesalers and companies requiring reliable supply solutions.
+        </span>
+      </p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-box">
+        <h3><span class="es">Nuestra empresa</span><span class="en">Our company</span></h3>
+        <p>
+          <span class="es">
+            RIMSEG se especializa en la importación y comercialización de productos
+            para distribuidores, con enfoque en textiles, organización, muebles,
+            mesas, artículos para el hogar, consumo y equipamiento comercial.
+          </span>
+          <span class="en">
+            RIMSEG specializes in importing and commercializing products for
+            distributors, with a focus on textiles, organization, furniture,
+            tables, home goods, consumer products and commercial equipment.
+          </span>
+        </p>
+        <p>
+          <span class="es">
+            La empresa cuenta con oficinas corporativas en Naucalpan de Juárez,
+            Estado de México, y una estructura operativa orientada al servicio,
+            inventario y distribución.
+          </span>
+          <span class="en">
+            The company has corporate offices in Naucalpan de Juárez, State of Mexico,
+            and an operational structure focused on service, inventory and distribution.
+          </span>
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>2018</strong>
+          <span class="es">Inicio de operaciones</span>
+          <span class="en">Operations started</span>
+        </div>
+
+        <div class="stat">
+          <strong>MX</strong>
+          <span class="es">Mercado nacional</span>
+          <span class="en">National market</span>
+        </div>
+
+        <div class="stat">
+          <strong>B2B</strong>
+          <span class="es">Distribuidores y mayoristas</span>
+          <span class="en">Distributors & wholesalers</span>
+        </div>
+
+        <div class="stat">
+          <strong>360°</strong>
+          <span class="es">Abastecimiento comercial</span>
+          <span class="en">Commercial supply</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section light">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Servicios</span><span class="en">Services</span></span>
+      <h2>
+        <span class="es">Soluciones para el comercio y la distribución.</span>
+        <span class="en">Solutions for commerce and distribution.</span>
+      </h2>
+      <p>
+        <span class="es">
+          Acompañamos a distribuidores y negocios con productos, logística
+          y soluciones comerciales adaptadas al mercado mexicano.
+        </span>
+        <span class="en">
+          We support distributors and businesses with products, logistics
+          and commercial solutions adapted to the Mexican market.
+        </span>
+      </p>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🌐</div>
+        <h3><span class="es">Importación</span><span class="en">Importing</span></h3>
+        <p>
+          <span class="es">Gestión comercial de productos provenientes de mercados internacionales.</span>
+          <span class="en">Commercial management of products sourced from international markets.</span>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3><span class="es">Comercialización</span><span class="en">Commercialization</span></h3>
+        <p>
+          <span class="es">Venta y desarrollo de productos para distribuidores, mayoristas y negocios.</span>
+          <span class="en">Product sales and development for distributors, wholesalers and businesses.</span>
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🚚</div>
+        <h3><span class="es">Distribución</span><span class="en">Distribution</span></h3>
+        <p>
+          <span class="es">Soluciones de abastecimiento para atender necesidades comerciales en México.</span>
+          <span class="en">Supply solutions to serve commercial needs across Mexico.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="logistica" class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Importación y logística</span><span class="en">Import & logistics</span></span>
+      <h2>
+        <span class="es">Abastecimiento desde origen hasta distribución.</span>
+        <span class="en">Supply from origin to distribution.</span>
+      </h2>
+      <p>
+        <span class="es">RIMSEG integra importación, almacenamiento y distribución para atender a distribuidores, mayoristas y negocios.</span>
+        <span class="en">RIMSEG integrates import, storage and distribution to serve distributors, wholesalers and businesses.</span>
+      </p>
+    </div>
+
+    <div class="logistics-hero">
+      <div class="logistics-main" style="position:relative;">
+        <img src="assets/barco-contenedores.png" alt="Barco portacontenedores RIMSEG">
+        <div class="photo-label"><span class="es">Importación internacional</span><span class="en">International import</span></div>
+      </div>
+
+      <div class="logistics-stack">
+        <div class="logistics-card">
+          <img src="assets/camion-logistica.png" alt="Camión de logística RIMSEG">
+          <div class="photo-label"><span class="es">Distribución y entrega</span><span class="en">Distribution & delivery</span></div>
+        </div>
+
+        <div class="logistics-card">
+          <img src="assets/bodega-rimseg-superior.png" alt="Ubicación de bodega RIMSEG">
+          <div class="photo-label"><span class="es">Bodega e inventario</span><span class="en">Warehouse & inventory</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="categories" class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Categorías</span><span class="en">Categories</span></span>
+      <h2>
+        <span class="es">Líneas de producto para diferentes canales comerciales.</span>
+        <span class="en">Product lines for different commercial channels.</span>
+      </h2>
+      <p>
+        <span class="es">
+          Trabajamos con artículos de organización, hogar, muebles, mesas,
+          equipamiento comercial, jardín, temporada y soluciones industriales.
+        </span>
+        <span class="en">
+          We work with organization, home, furniture, tables, commercial equipment,
+          garden, seasonal and industrial solution products.
+        </span>
+      </p>
+    </div>
+
+    <div class="categories">
+      <div class="category cat-textiles">
+        <div class="category-content">
+          <h3><span class="es">Textiles y Organización</span><span class="en">Textiles & Organization</span></h3>
+          <p>
+            <span class="es">Soluciones para ropa, almacenamiento, textiles y organización del hogar.</span>
+            <span class="en">Solutions for clothing, storage, textiles and home organization.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-furniture">
+        <div class="category-content">
+          <h3><span class="es">Muebles y Mesas</span><span class="en">Furniture & Tables</span></h3>
+          <p>
+            <span class="es">Mesas plegables, auxiliares y productos para espacios comerciales.</span>
+            <span class="en">Folding tables, auxiliary tables and products for commercial spaces.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-home">
+        <div class="category-content">
+          <h3><span class="es">Hogar y Consumo</span><span class="en">Home & Consumer Goods</span></h3>
+          <p>
+            <span class="es">Artículos prácticos para hogar, uso diario y distribución mayorista.</span>
+            <span class="en">Practical home and everyday items for wholesale distribution.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-commercial">
+        <div class="category-content">
+          <h3><span class="es">Equipamiento Comercial</span><span class="en">Commercial Equipment</span></h3>
+          <p>
+            <span class="es">Herramientas y productos útiles para tiendas, operación y punto de venta.</span>
+            <span class="en">Useful tools and products for stores, operations and point of sale.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-garden">
+        <div class="category-content">
+          <h3><span class="es">Jardín y Temporada</span><span class="en">Garden & Seasonal</span></h3>
+          <p>
+            <span class="es">Productos para exterior, iluminación, temporada y consumo.</span>
+            <span class="en">Outdoor, lighting, seasonal and consumer products.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="category cat-industrial">
+        <div class="category-content">
+          <h3><span class="es">Industrial y Logística</span><span class="en">Industrial & Logistics</span></h3>
+          <p>
+            <span class="es">Soluciones de operación, carga, seguridad y manejo de mercancía.</span>
+            <span class="en">Operational, cargo, safety and merchandise handling solutions.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="textil" class="section light">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Textil RIMSEG</span><span class="en">RIMSEG textile</span></span>
+      <h2>
+        <span class="es">Catálogo textil con modelos seriados.</span>
+        <span class="en">Textile catalog with serial models.</span>
+      </h2>
+      <p>
+        <span class="es">Línea importante de chamarras, prendas, telas, acabados y productos de moda para distribución mayorista.</span>
+        <span class="en">Key line of jackets, garments, fabrics, finishes and fashion products for wholesale distribution.</span>
+      </p>
+    </div>
+
+    <div class="textile-feature">
+      <img src="assets/textil-modelo-001.jpg" alt="Catálogo textil RIMSEG modelo RIM-TEX-001">
+      <div class="textile-box">
+        <h3><span class="es">Textil, telas y prendas</span><span class="en">Textile, fabrics and garments</span></h3>
+        <p><span class="es">Sección enfocada en prendas de dama, chamarras, acabados tipo piel, acolchados, denim, suéteres y telas para temporada.</span><span class="en">Section focused on women garments, jackets, leather-look finishes, quilted garments, denim, sweaters and seasonal fabrics.</span></p>
+        <div class="textile-tags">
+          <span>Chamarras</span>
+          <span>Telas</span>
+          <span>Denim</span>
+          <span>Acolchado</span>
+          <span>Mayoreo</span>
+          <span>RIM-TEX</span>
+        </div>
+        <a class="btn gold" href="assets/catalogo-textil-rimseg.pdf" target="_blank"><span class="es">Abrir catálogo textil</span><span class="en">Open textile catalog</span></a>
+        <a class="btn outline-dark" href="https://wa.me/5215539133302?text=Hola%2C%20quiero%20cotizar%20textil%20RIMSEG" target="_blank" rel="noopener"><span class="es">Cotizar textil</span><span class="en">Quote textile</span></a>
+      </div>
+    </div>
+
+    <div class="textile-grid">
+      <div class="textile-card"><img src="assets/textil-modelo-001.jpg" alt="RIM-TEX-001"><div><small>RIM-TEX-001</small><h3><span class="es">Chamarra dama acabado piel</span><span class="en">Women leather-look jacket</span></h3></div></div>
+      <div class="textile-card"><img src="assets/textil-modelo-002.jpg" alt="RIM-TEX-002"><div><small>RIM-TEX-002</small><h3><span class="es">Chamarra acolchada con capucha</span><span class="en">Quilted hooded jacket</span></h3></div></div>
+      <div class="textile-card"><img src="assets/textil-modelo-003.jpg" alt="RIM-TEX-003"><div><small>RIM-TEX-003</small><h3><span class="es">Chamarra interior borrega</span><span class="en">Sherpa lining jacket</span></h3></div></div>
+      <div class="textile-card"><img src="assets/textil-modelo-004.jpg" alt="RIM-TEX-004"><div><small>RIM-TEX-004</small><h3><span class="es">Chamarra ligera colores</span><span class="en">Lightweight color jacket</span></h3></div></div>
+      <div class="textile-card"><img src="assets/textil-modelo-005.jpg" alt="RIM-TEX-005"><div><small>RIM-TEX-005</small><h3><span class="es">Chamarra combinada textura</span><span class="en">Mixed texture jacket</span></h3></div></div>
+      <div class="textile-card"><img src="assets/textil-modelo-006.jpg" alt="RIM-TEX-006"><div><small>RIM-TEX-006</small><h3><span class="es">Bomber con diseño textil</span><span class="en">Textile design bomber</span></h3></div></div>
+      <div class="textile-card"><img src="assets/textil-modelo-008.jpg" alt="RIM-TEX-008"><div><small>RIM-TEX-008</small><h3><span class="es">Chamarra biker dama</span><span class="en">Women biker jacket</span></h3></div></div>
+      <div class="textile-card"><img src="assets/textil-modelo-009.jpg" alt="RIM-TEX-009"><div><small>RIM-TEX-009</small><h3><span class="es">Denim y acabados decorativos</span><span class="en">Denim and decorative finishes</span></h3></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="catalog" class="section light">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Catálogo</span><span class="en">Catalog</span></span>
+      <h2>
+        <span class="es">Productos destacados.</span>
+        <span class="en">Featured products.</span>
+      </h2>
+      <p>
+        <span class="es">
+          Una muestra de productos disponibles para distribuidores y mayoristas.
+          Consulta el catálogo completo para ver más líneas y referencias.
+        </span>
+        <span class="en">
+          A sample of products available for distributors and wholesalers.
+          View the full catalog for more product lines and references.
+        </span>
+      </p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-storage-bags.jpg" alt="Bolsas de almacenamiento"></div>
+        <div class="product-content">
+          <small>Organización</small>
+          <h3><span class="es">Bolsas de almacenamiento</span><span class="en">Storage bags</span></h3>
+          <p><span class="es">Soluciones para organización de ropa, blancos y textiles.</span><span class="en">Solutions for organizing clothes, linens and textiles.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-organizer-cart-white.jpg" alt="Carrito organizador"></div>
+        <div class="product-content">
+          <small>Hogar</small>
+          <h3><span class="es">Carrito organizador</span><span class="en">Organizer cart</span></h3>
+          <p><span class="es">Producto práctico para hogar, oficina y espacios comerciales.</span><span class="en">Practical product for home, office and commercial spaces.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-folding-table-white.jpg" alt="Mesa plegable"></div>
+        <div class="product-content">
+          <small>Muebles</small>
+          <h3><span class="es">Mesa plegable</span><span class="en">Folding table</span></h3>
+          <p><span class="es">Mesa útil para eventos, comercio, jardín y espacios multiusos.</span><span class="en">Useful table for events, retail, garden and multipurpose spaces.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-labeler-retail.jpg" alt="Pistola etiquetadora"></div>
+        <div class="product-content">
+          <small>Comercial</small>
+          <h3><span class="es">Pistola etiquetadora</span><span class="en">Labeling gun</span></h3>
+          <p><span class="es">Herramienta para punto de venta, tiendas y operación comercial.</span><span class="en">Tool for point of sale, stores and commercial operations.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-solar-lights.jpg" alt="Luces solares"></div>
+        <div class="product-content">
+          <small>Temporada</small>
+          <h3><span class="es">Luces solares</span><span class="en">Solar lights</span></h3>
+          <p><span class="es">Producto para exterior, jardín, decoración y temporada.</span><span class="en">Product for outdoor, garden, decoration and seasonal use.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-popcorn-machine.jpg" alt="Máquina de palomitas"></div>
+        <div class="product-content">
+          <small>Equipamiento</small>
+          <h3><span class="es">Máquina de palomitas</span><span class="en">Popcorn machine</span></h3>
+          <p><span class="es">Equipo para negocio, eventos, tiendas y entretenimiento.</span><span class="en">Equipment for business, events, stores and entertainment.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-pallet-jack.jpg" alt="Patín hidráulico"></div>
+        <div class="product-content">
+          <small>Industrial</small>
+          <h3><span class="es">Patín hidráulico</span><span class="en">Pallet jack</span></h3>
+          <p><span class="es">Solución para carga, almacén y manejo de mercancía.</span><span class="en">Solution for cargo, warehouse and merchandise handling.</span></p>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img"><img src="assets/catalog-icecream-machine.jpg" alt="Máquina de helados"></div>
+        <div class="product-content">
+          <small>Comercial</small>
+          <h3><span class="es">Máquina de helados</span><span class="en">Ice cream machine</span></h3>
+          <p><span class="es">Equipo para negocio, alimentos y puntos de venta.</span><span class="en">Equipment for business, food service and points of sale.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="catalog-cta">
+      <a class="btn gold" href="assets/catalogo-rimseg.pdf" target="_blank">
+        <span class="es">Abrir catálogo completo</span>
+        <span class="en">Open full catalog</span>
+      </a>
+      <a class="btn outline-dark" href="https://wa.me/5215539133302?text=Hola%2C%20quiero%20una%20cotizaci%C3%B3n%20de%20RIMSEG" target="_blank" rel="noopener">
+        <span class="es">Cotizar por WhatsApp</span>
+        <span class="en">Quote via WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="infrastructure" class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Infraestructura</span><span class="en">Infrastructure</span></span>
+      <h2>
+        <span class="es">Oficinas, inventario y operación comercial.</span>
+        <span class="en">Offices, inventory and commercial operations.</span>
+      </h2>
+      <p>
+        <span class="es">
+          RIMSEG cuenta con instalaciones corporativas y capacidad operativa
+          para atender relaciones comerciales con distribuidores y mayoristas.
+        </span>
+        <span class="en">
+          RIMSEG has corporate facilities and operational capacity to serve
+          commercial relationships with distributors and wholesalers.
+        </span>
+      </p>
+    </div>
+
+    <div class="infra-grid">
+      <div class="infra-card">
+        <div class="infra-img office"></div>
+        <div class="content">
+          <h3><span class="es">Oficinas corporativas</span><span class="en">Corporate offices</span></h3>
+          <p>
+            <span class="es">Espacio de atención y administración comercial en Naucalpan de Juárez.</span>
+            <span class="en">Commercial service and administrative space in Naucalpan de Juárez.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="infra-card">
+        <div class="infra-img warehouse"></div>
+        <div class="content">
+          <h3><span class="es">Almacén e inventario</span><span class="en">Warehouse & inventory</span></h3>
+          <p>
+            <span class="es">Capacidad de almacenamiento y manejo de productos para distribución.</span>
+            <span class="en">Storage and product handling capacity for distribution.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="infra-card">
+        <div class="infra-img meeting"></div>
+        <div class="content">
+          <h3><span class="es">Atención comercial</span><span class="en">Commercial service</span></h3>
+          <p>
+            <span class="es">Comunicación directa con clientes, distribuidores y proveedores.</span>
+            <span class="en">Direct communication with clients, distributors and suppliers.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section light">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Galería</span><span class="en">Gallery</span></span>
+      <h2>
+        <span class="es">Instalaciones RIMSEG.</span>
+        <span class="en">RIMSEG facilities.</span>
+      </h2>
+    </div>
+
+    <div class="gallery">
+      <div class="gallery-main">
+        <div>
+          <h3><span class="es">Bodega e inventario</span><span class="en">Warehouse & inventory</span></h3>
+          <p>
+            <span class="es">Capacidad operativa para manejo de productos.</span>
+            <span class="en">Operational capacity for product handling.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="gallery-side">
+        <div class="gallery-tile g1"></div>
+        <div class="gallery-tile g2"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title">
+      <span class="label"><span class="es">Proceso</span><span class="en">Process</span></span>
+      <h2>
+        <span class="es">Cadena comercial simple y eficiente.</span>
+        <span class="en">A simple and efficient commercial chain.</span>
+      </h2>
+    </div>
+
+    <div class="process">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h4><span class="es">Proveedor</span><span class="en">Supplier</span></h4>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <h4><span class="es">Importación</span><span class="en">Import</span></h4>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <h4><span class="es">Inventario</span><span class="en">Inventory</span></h4>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <h4><span class="es">Distribución</span><span class="en">Distribution</span></h4>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <h4><span class="es">Cliente</span><span class="en">Client</span></h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact">
+      <div>
+        <h2>
+          <span class="es">Contacto comercial</span>
+          <span class="en">Commercial contact</span>
+        </h2>
+
+        <p>
+          <span class="es">
+            Para información comercial, ventas, compras, atención a clientes
+            o propuestas de abastecimiento, contáctanos por correo electrónico.
+          </span>
+          <span class="en">
+            For commercial information, sales, purchasing, customer service
+            or supply proposals, contact us by email.
+          </span>
+        </p>
+
+        <a class="btn gold" href="https://wa.me/5215539133302?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20RIMSEG" target="_blank" rel="noopener">
+          WhatsApp: +52 1 55 3913 3302
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <p>
+          <strong><span class="es">Razón social</span><span class="en">Legal name</span></strong>
+          CORPORATIVO COMERCIAL RIMSEG, S.A. de C.V.
+        </p>
+
+        <p>
+          <strong>RFC</strong>
+          CCR180816J26
+        </p>
+
+        <p>
+          <strong><span class="es">Oficinas corporativas</span><span class="en">Corporate offices</span></strong>
+          La Montaña 28-A, Col. Los Pastores,<br>
+          Naucalpan de Juárez, Estado de México, C.P. 53340
+        </p>
+
+        <div class="email-list">
+          <div class="email-item">
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/5215539133302?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20RIMSEG" target="_blank" rel="noopener">+52 1 55 3913 3302</a>
+          </div>
+          <div class="email-item">
+            <strong><span class="es">Información general</span><span class="en">General information</span></strong>
+            <a href="mailto:info@rimseg.com">info@rimseg.com</a>
+          </div>
+
+          <div class="email-item">
+            <strong><span class="es">Ventas</span><span class="en">Sales</span></strong>
+            <a href="mailto:ventas@rimseg.com">ventas@rimseg.com</a>
+          </div>
+
+          <div class="email-item">
+            <strong><span class="es">Compras</span><span class="en">Purchasing</span></strong>
+            <a href="mailto:compras@rimseg.com">compras@rimseg.com</a>
+          </div>
+
+          <div class="email-item">
+            <strong><span class="es">Atención a clientes</span><span class="en">Customer service</span></strong>
+            <a href="mailto:atencionalclientes@rimseg.com">atencionalclientes@rimseg.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a class="whatsapp-float" href="https://wa.me/5215539133302?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20RIMSEG" target="_blank" rel="noopener">WhatsApp</a>
+
+<footer>
+  © 2026 RIMSEG · CORPORATIVO COMERCIAL RIMSEG, S.A. de C.V. ·
+  <span class="es">Importadora y Comercializadora</span>
+  <span class="en">Importer & Commercial Distributor</span>
+</footer>
+
+<script>
+  function setLang(lang) {
+    if (lang === "en") {
+      document.body.classList.add("english");
+      document.getElementById("btn-en").classList.add("active");
+      document.getElementById("btn-es").classList.remove("active");
+      document.documentElement.lang = "en";
+    } else {
+      document.body.classList.remove("english");
+      document.getElementById("btn-es").classList.add("active");
+      document.getElementById("btn-en").classList.remove("active");
+      document.documentElement.lang = "es";
+    }
+  }
+</script>
+
+</body>
+</html>
